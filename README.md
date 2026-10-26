@@ -22,9 +22,15 @@ references/rules.md   허용 명령, 대체표, 경로별 작성법
 
 스킬이 레포 루트에 있으므로 레포 주소만으로 설치합니다.
 
-- **Gemini CLI:** `gemini skills install https://github.com/getbetterwithu/amplify-math`
-- **Claude Code:** 이 레포를 `~/.claude/skills/amplify-math/`에 복제합니다.
-  `git clone https://github.com/getbetterwithu/amplify-math ~/.claude/skills/amplify-math`
-- **그 밖의 AI 도구:** `instructions.md`를 지침으로 붙여 넣고 `references/rules.md`를 첨부합니다.
-
-> 설치 명령은 도구 버전에 따라 다를 수 있습니다. 실제로 확인된 설치 방법과 결과는 이 문서를 갱신해 기록합니다.
+- **Claude Code** (확인됨):
+  ```
+  claude plugin marketplace add getbetterwithu/amplify-math
+  claude plugin install amplify-math@amplify-math
+  ```
+  설치 후 `claude plugin list`에서 `amplify-math@amplify-math`가 enabled로 보이면 됩니다. 다음 세션부터 적용됩니다.
+- **Gemini CLI** (0.65.0에서 확인됨):
+  ```
+  gemini skills install https://github.com/getbetterwithu/amplify-math --scope user
+  ```
+  설치 후 `gemini skills list`에서 `amplify-math [Enabled]`가 보이면 됩니다.
+- **그 밖의 AI 도구** (ChatGPT 등): `instructions.md`를 지침으로 붙여 넣고 `references/rules.md`를 첨부합니다.
