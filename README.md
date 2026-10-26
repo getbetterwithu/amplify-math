@@ -13,14 +13,14 @@ Amplify의 수식은 표준 LaTeX 전체가 아니라 등록된 명령만 그립
 ## 구성
 
 ```
-SKILL.md              스킬 본체 (이름·설명·작업 절차)
-instructions.md       지침 요약본 (스킬을 쓰지 않는 AI 도구에 붙여 넣는 용도)
-references/rules.md   허용 명령, 대체표, 경로별 작성법
+skills/amplify-math/SKILL.md              스킬 본체 (이름·설명·작업 절차)
+skills/amplify-math/instructions.md       지침 요약본 (스킬을 쓰지 않는 AI 도구에 붙여 넣는 용도)
+skills/amplify-math/references/rules.md   허용 명령, 대체표, 경로별 작성법
 ```
 
 ## 설치 방법 (개요)
 
-스킬이 레포 루트에 있으므로 레포 주소만으로 설치합니다.
+레포 주소만으로 설치합니다.
 
 - **Claude Code** (확인됨):
   ```
@@ -28,9 +28,10 @@ references/rules.md   허용 명령, 대체표, 경로별 작성법
   claude plugin install amplify-math@amplify-math
   ```
   설치 후 `claude plugin list`에서 `amplify-math@amplify-math`가 enabled로 보이면 됩니다. 다음 세션부터 적용됩니다.
-- **Gemini CLI** (0.65.0에서 확인됨):
+- **Antigravity** (`agy`):
   ```
-  gemini skills install https://github.com/getbetterwithu/amplify-math --scope user
+  agy plugin install https://github.com/getbetterwithu/amplify-math
+  agy plugin list
   ```
-  설치 후 `gemini skills list`에서 `amplify-math [Enabled]`가 보이면 됩니다.
-- **그 밖의 AI 도구** (ChatGPT 등): `instructions.md`를 지침으로 붙여 넣고 `references/rules.md`를 첨부합니다.
+  설치 결과에 `skills : 1 processed`가 보이면 됩니다. 이전에 설치해 빈 플러그인이 남아 있다면 `agy plugin uninstall amplify-math` 후 다시 설치합니다.
+- **그 밖의 AI 도구** (ChatGPT 등): `skills/amplify-math/instructions.md`를 지침으로 붙여 넣고 `skills/amplify-math/references/rules.md`를 첨부합니다.

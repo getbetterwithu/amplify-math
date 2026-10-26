@@ -4,5 +4,5 @@
   "license": "MIT",
   "description": "Amplify Classroom(Desmos)의 메모·수식 답변·CL에 들어갈 수학 수식을 작성·검수·변환하는 스킬",
   "author": { "name": "getbetterwithu" },
-  "skills": ["./"]
+  "skills": ["./skills"]
 }
