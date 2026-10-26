@@ -34,4 +34,11 @@ skills/amplify-math/references/rules.md   허용 명령, 대체표, 경로별 �
   agy plugin list
   ```
   설치 결과에 `skills : 1 processed`가 보이면 됩니다. 이전에 설치해 빈 플러그인이 남아 있다면 `agy plugin uninstall amplify-math` 후 다시 설치합니다.
-- **그 밖의 AI 도구** (ChatGPT 등): `skills/amplify-math/instructions.md`를 지침으로 붙여 넣고 `skills/amplify-math/references/rules.md`를 첨부합니다.
+- **Codex CLI** (OpenAI):
+  ```
+  codex plugin marketplace add getbetterwithu/amplify-math
+  codex plugin add amplify-math@amplify-math
+  codex plugin list
+  ```
+  `codex plugin list`에서 `installed, enabled`로 보이면 됩니다.
+- **ChatGPT 웹·앱 등 명령어를 쓸 수 없는 도구**: `skills/amplify-math/instructions.md`를 지침으로 붙여 넣고 `skills/amplify-math/references/rules.md`를 첨부합니다.
