@@ -1,0 +1,11 @@
+{
+  "name": "amplify-math",
+  "owner": { "name": "getbetterwithu" },
+  "plugins": [
+    {
+      "name": "amplify-math",
+      "source": "./",
+      "description": "Amplify Classroom 수식 작성·검수·변환 스킬"
+    }
+  ]
+}
